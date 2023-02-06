@@ -1,35 +1,39 @@
+import sys
+import random
+import time
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QApplication, QMainWindow
-import sys
-import os
 
 
-class MyWindow(QMainWindow):
+class PrettyFox(QMainWindow):
     def __init__(self):
-        super(MyWindow, self).__init__()
-        self.b1 = QtWidgets.QPushButton(self)
+        super(PrettyFox, self).__init__()
+        self.button = QtWidgets.QPushButton(self)
         self.label = QtWidgets.QLabel(self)
+        self.input_ans = QtWidgets.QInputDialog(self)
+        self.setGeometry(200, 200, 300, 300)
+        self.setWindowTitle("Pretty Fox")
         self.initUI()
-        self.i = 0
-
-    def button_clicked(self):
-        print("clicked")
-        self.label.setText(f"{self.i}")
-        self.i += 1
 
     def initUI(self):
-        self.setGeometry(200, 200, 300, 300)
-        self.setWindowTitle("Foxy")
+        self.label.move(100, 0)
+        self.input_ans.move(100, 100)
+        self.button.move(100, 150)
+        a = self.__generate_equation()
+        self.label.setText(a[0])
 
-        self.label.setText("my first label!")
-        self.label.move(50, 50)
+    @staticmethod
+    def __generate_equation():
+        equation = f"{random.randint(1, 10)} * {random.randint(1, 10)} + {random.randint(1, 10)}"
+        return f"{equation} = ?", eval(equation)
 
-        self.b1.setText("click me!")
-        self.b1.clicked.connect(self.button_clicked)
+
+def Pretty_Fox():
+    app = QApplication(sys.argv)
+    win = PrettyFox()
+    win.show()
+    sys.exit(app.exec())
 
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    win = MyWindow()
-    win.show()
-    sys.exit(app.exec_())
+    Pretty_Fox()

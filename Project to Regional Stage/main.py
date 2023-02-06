@@ -1,4 +1,3 @@
-from hashlib import md5
+from app import Pretty_Fox
 
-print(md5('046d:c31c'.encode()).hexdigest())
-print(md5('046d:c05a'.encode()).hexdigest())
+Pretty_Fox()

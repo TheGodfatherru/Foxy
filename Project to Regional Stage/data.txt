@@ -1,7 +1,6 @@
-Bus 002 Device 003: ID 046d:c05a Logitech, Inc. M90/M100 Optical Mouse
+Bus 002 Device 006: ID 046d:c05a Logitech, Inc. M90/M100 Optical Mouse
 Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
 Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 001 Device 003: ID 046d:c31c Logitech, Inc. Keyboard K120
-Bus 001 Device 009: ID 0951:1666 Kingston Technology DataTraveler 100 G3/G4/SE9 G2/50
+Bus 001 Device 019: ID 046d:c31c Logitech, Inc. Keyboard K120
 Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
